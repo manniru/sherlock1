@@ -11,5 +11,6 @@
     <string name="title_activity_web_services">WebServices</string>
     <string name="title_activity_reports_list">ReportsList</string>
     <string name="title_activity_reports_add">ReportsAdd</string>
-
+    <string name="title_activity_camera">Camera</string>
+    
 </resources>

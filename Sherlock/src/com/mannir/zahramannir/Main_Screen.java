@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import org.json.JSONArray;
 
+import com.zahra.camera.MakePhotoActivity;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -39,7 +41,7 @@ public class Main_Screen extends Activity {
 	// contacts JSONArray
 	JSONArray contacts = null;
 	///////////////////////////////////////
-    Button add_btn, search_btn, json_btn, reports_btn;
+    Button add_btn, search_btn, json_btn, reports_btn, camera_btn;
     ListView Contact_listview;
     ArrayList<Contact> contact_data = new ArrayList<Contact>();
     Contact_Adapter cAdapter;
@@ -57,6 +59,7 @@ public class Main_Screen extends Activity {
 	    search_btn = (Button) findViewById(R.id.search_btn);
 	    json_btn = (Button) findViewById(R.id.json_btn);
 	    reports_btn = (Button) findViewById(R.id.reports_btn);
+	    camera_btn = (Button) findViewById(R.id.camera_btn);
 
 	    Set_Referash_Data();
 
@@ -115,15 +118,20 @@ public class Main_Screen extends Activity {
 	    }
 	});
 	
+	camera_btn.setOnClickListener(new View.OnClickListener() {
+
+	    @Override
+	    public void onClick(View v) {
+	           Intent intent = new Intent(Main_Screen.this,MakePhotoActivity.class); 
+	             startActivity(intent);
+
+	    }
+	});
+	
 	
 	
     }
 
-    public void Call_My_Blog(View v) {
-	Intent intent = new Intent(Main_Screen.this, My_Blog.class);
-	startActivity(intent);
-
-    }
 
     public void Set_Referash_Data() {
 	contact_data.clear();
