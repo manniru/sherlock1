@@ -29,10 +29,10 @@ public final class R {
         public static final int wp=0x7f020005;
     }
     public static final class id {
-        public static final int EditText01=0x7f080021;
-        public static final int LinearLayout01=0x7f080020;
-        public static final int ListView01=0x7f080022;
-        public static final int action_settings=0x7f080023;
+        public static final int EditText01=0x7f080029;
+        public static final int LinearLayout01=0x7f080028;
+        public static final int ListView01=0x7f08002a;
+        public static final int action_settings=0x7f08002b;
         public static final int add_age=0x7f080003;
         public static final int add_btn=0x7f08001b;
         public static final int add_email=0x7f080006;
@@ -40,6 +40,8 @@ public final class R {
         public static final int add_save_btn=0x7f080008;
         public static final int add_view=0x7f080007;
         public static final int add_view_all=0x7f080009;
+        public static final int addreport_btn=0x7f080026;
+        public static final int addreports_btn=0x7f080025;
         public static final int btn_delete=0x7f08001a;
         public static final int btn_update=0x7f080019;
         public static final int comments=0x7f080005;
@@ -48,10 +50,16 @@ public final class R {
         public static final int haircolor=0x7f080004;
         public static final int height=0x7f080002;
         public static final int json_btn=0x7f08001d;
-        public static final int list=0x7f08001e;
+        public static final int list=0x7f08001f;
+        public static final int listView1=0x7f080027;
+        public static final int location_txt=0x7f080023;
+        public static final int notes_txt=0x7f080024;
+        public static final int personid_txt=0x7f080021;
+        public static final int reports_btn=0x7f08001e;
         public static final int search_btn=0x7f08001c;
         public static final int textView1=0x7f08000e;
         public static final int textView2=0x7f08000d;
+        public static final int time_txt=0x7f080022;
         public static final int tvIsConnected=0x7f08000f;
         public static final int update_btn=0x7f08000b;
         public static final int update_view=0x7f08000a;
@@ -64,7 +72,7 @@ public final class R {
         public static final int user_height_txt=0x7f080014;
         public static final int user_name_id=0x7f080011;
         public static final int user_name_txt=0x7f080012;
-        public static final int webView1=0x7f08001f;
+        public static final int webView1=0x7f080020;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -74,16 +82,23 @@ public final class R {
         public static final int json=0x7f030004;
         public static final int jsonactivity=0x7f030005;
         public static final int listview_row=0x7f030006;
-        public static final int main=0x7f030007;
-        public static final int my_blog=0x7f030008;
-        public static final int searchactivity=0x7f030009;
+        public static final int listview_row2=0x7f030007;
+        public static final int main=0x7f030008;
+        public static final int my_blog=0x7f030009;
+        public static final int reportsadd=0x7f03000a;
+        public static final int reportslist=0x7f03000b;
+        public static final int searchactivity=0x7f03000c;
+        public static final int webservices=0x7f03000d;
     }
     public static final class menu {
         public static final int android_jsonparsing=0x7f070000;
         public static final int json=0x7f070001;
         public static final int main=0x7f070002;
-        public static final int search=0x7f070003;
-        public static final int simple_json=0x7f070004;
+        public static final int reports_add=0x7f070003;
+        public static final int reports_list=0x7f070004;
+        public static final int search=0x7f070005;
+        public static final int simple_json=0x7f070006;
+        public static final int web_services=0x7f070007;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -91,8 +106,11 @@ public final class R {
         public static final int hello_world=0x7f050002;
         public static final int title_activity_android_jsonparsing=0x7f050005;
         public static final int title_activity_json=0x7f050004;
+        public static final int title_activity_reports_add=0x7f050009;
+        public static final int title_activity_reports_list=0x7f050008;
         public static final int title_activity_search=0x7f050003;
         public static final int title_activity_simple_json=0x7f050006;
+        public static final int title_activity_web_services=0x7f050007;
     }
     public static final class style {
         /** 

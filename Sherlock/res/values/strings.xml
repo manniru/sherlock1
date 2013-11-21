@@ -8,5 +8,8 @@
     <string name="title_activity_json">JsonActivity</string>
     <string name="title_activity_android_jsonparsing">AndroidJSONParsingActivity</string>
     <string name="title_activity_simple_json">SimpleJson</string>
+    <string name="title_activity_web_services">WebServices</string>
+    <string name="title_activity_reports_list">ReportsList</string>
+    <string name="title_activity_reports_add">ReportsAdd</string>
 
 </resources>

@@ -20,7 +20,7 @@ public class Contact {
     // constructor
     public Contact(int id, String name, String _age, String _email, 
     		String gender, String height, String haircolor, String comments) {
-	//this._id = id;
+	this._id = id;
 	this._name = name;
 	this._age = _age;
 	this._email = _email;

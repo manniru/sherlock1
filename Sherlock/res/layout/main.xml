@@ -51,6 +51,17 @@
             android:focusable="false"
             android:text="Upload"
             android:textColor="#FFFFFF" />
+        
+        <Button
+            android:id="@+id/reports_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.67"
+            android:background="#000000"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="Reports"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 

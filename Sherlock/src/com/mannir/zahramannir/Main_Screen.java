@@ -39,7 +39,7 @@ public class Main_Screen extends Activity {
 	// contacts JSONArray
 	JSONArray contacts = null;
 	///////////////////////////////////////
-    Button add_btn, search_btn, json_btn;
+    Button add_btn, search_btn, json_btn, reports_btn;
     ListView Contact_listview;
     ArrayList<Contact> contact_data = new ArrayList<Contact>();
     Contact_Adapter cAdapter;
@@ -56,6 +56,7 @@ public class Main_Screen extends Activity {
 	    add_btn = (Button) findViewById(R.id.add_btn);
 	    search_btn = (Button) findViewById(R.id.search_btn);
 	    json_btn = (Button) findViewById(R.id.json_btn);
+	    reports_btn = (Button) findViewById(R.id.reports_btn);
 
 	    Set_Referash_Data();
 
@@ -99,6 +100,16 @@ public class Main_Screen extends Activity {
 	    @Override
 	    public void onClick(View v) {
 	           Intent intent = new Intent(Main_Screen.this,Json.class); 
+	             startActivity(intent);
+
+	    }
+	});
+	
+	reports_btn.setOnClickListener(new View.OnClickListener() {
+
+	    @Override
+	    public void onClick(View v) {
+	           Intent intent = new Intent(Main_Screen.this,ReportsList.class); 
 	             startActivity(intent);
 
 	    }
@@ -159,8 +170,7 @@ public class Main_Screen extends Activity {
 	    System.out.println(mobile);
 	}
 	db.close();
-	cAdapter = new Contact_Adapter(Main_Screen.this, R.layout.listview_row,
-		contact_data);
+	cAdapter = new Contact_Adapter(Main_Screen.this, R.layout.listview_row,	contact_data);
 	Contact_listview.setAdapter(cAdapter);
 	cAdapter.notifyDataSetChanged();
     }

@@ -161,6 +161,15 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 	values.put(KEY_HEIGHT, contact.get_height());
 	values.put(KEY_HAIRCOLOR, contact.get_haircolor());
 	values.put(KEY_COMMENTS, contact.get_comments());
+	
+	System.out.println(contact.get_id());
+	System.out.println(contact.get_name());
+	System.out.println(contact.get_age());
+	System.out.println(contact.get_email());
+	System.out.println(contact.get_gender());
+	System.out.println(contact.get_height());
+	System.out.println(contact.get_haircolor());
+	System.out.println(contact.get_comments());
 
 	// updating row
 	return db.update(TABLE_CONTACTS, values, KEY_ID + " = ?",

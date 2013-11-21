@@ -57,6 +57,18 @@
             android:name="com.mannir.zahramannir.Json"
             android:label="@string/title_activity_json" >
         </activity>
+        <activity
+            android:name="com.test.jsonparser.WebServices"
+            android:label="@string/title_activity_web_services" >
+        </activity>
+                 <activity
+            android:name="com.mannir.zahramannir.ReportsList"
+            android:label="@string/title_activity_reports_list" >
+        </activity>
+        <activity
+            android:name="com.mannir.zahramannir.ReportsAdd"
+            android:label="@string/title_activity_reports_add" >
+        </activity>       
     </application>
 
 </manifest>

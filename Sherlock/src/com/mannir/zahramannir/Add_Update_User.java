@@ -137,26 +137,46 @@ public class Add_Update_User extends Activity {
 	    @Override
 	    public void onClick(View v) {
 	    	//Show_Toast("i will save");
+	    	/**
 			valid_gender = add_gender.getText().toString();
 			valid_height = add_height.getText().toString();
 			valid_haircolor = add_haircolor.getText().toString();
 			valid_comment = add_comment.getText().toString();
 			valid_age = add_age.getText().toString();
+			*/
 		// TODO Auto-generated method stub
 		// check the value state is null or not
-			/**
-		if (valid_name != null && valid_mob_number != null
-			&& valid_email != null && valid_name.length() != 0
-			&& valid_mob_number.length() != 0
-			&& valid_email.length() != 0) {
-*/
+	    	
+			valid_name = add_name.getText().toString();
+			valid_gender = add_gender.getText().toString();
+			valid_height = add_height.getText().toString();
+			valid_age = add_age.getText().toString();
+			valid_haircolor = add_haircolor.getText().toString();
+			valid_comment = add_comment.getText().toString();
+			valid_email = add_email.getText().toString();
+			
+		if (valid_name != null && valid_gender != null && valid_height!= null && valid_age != null
+			&& valid_haircolor != null && valid_comment != null && valid_email != null &&
+			valid_name.length() != 0 && valid_gender.length() != 0 && valid_height.length() != 0 &&
+			valid_age.length() != 0 && valid_haircolor.length() != 0 && valid_comment.length() != 0 &&
+			valid_email.length() != 0) {
+
 		    dbHandler.Add_Contact(new Contact(valid_name,
 			    valid_age, valid_email, valid_gender, valid_height, valid_haircolor, valid_comment));
 		    Toast_msg = "Data inserted successfully";
 		    Show_Toast(Toast_msg);
 		    Reset_Text();
+		    
+			Intent view_user = new Intent(Add_Update_User.this, Main_Screen.class);
+			view_user.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
+				| Intent.FLAG_ACTIVITY_NEW_TASK);
+			startActivity(view_user);
+			finish();
 
-	//	}
+	    } else {
+		    Toast_msg = "Sorry Some Fields are missing.\nPlease Fill up all.";
+		    Show_Toast(Toast_msg);
+		}
 
 	    }
 	});
@@ -165,28 +185,39 @@ public class Add_Update_User extends Activity {
 
 	    @Override
 	    public void onClick(View v) {
+	    	
 		// TODO Auto-generated method stub
 
 		valid_name = add_name.getText().toString();
-		valid_gender = add_age.getText().toString();
-		valid_height = add_email.getText().toString();
-		valid_age = add_email.getText().toString();
-		valid_haircolor = add_email.getText().toString();
-		valid_comment = add_email.getText().toString();
+		valid_gender = add_gender.getText().toString();
+		valid_height = add_height.getText().toString();
+		valid_age = add_age.getText().toString();
+		valid_haircolor = add_haircolor.getText().toString();
+		valid_comment = add_comment.getText().toString();
 		valid_email = add_email.getText().toString();
+		
 
-		// check the value state is null or not
-		if (valid_name != null //&& valid_mob_number != null
-			&& valid_email != null && valid_name.length() != 0
-		//	&& valid_mob_number.length() != 0
-			&& valid_email.length() != 0) {
 
+		if (valid_name != null && valid_gender != null && valid_height!= null && valid_age != null
+				&& valid_haircolor != null && valid_comment != null && valid_email != null &&
+				valid_name.length() != 0 && valid_gender.length() != 0 && valid_height.length() != 0 &&
+				valid_age.length() != 0 && valid_haircolor.length() != 0 && valid_comment.length() != 0 &&
+				valid_email.length() != 0) {
+			
 		    dbHandler.Update_Contact(new Contact(USER_ID, valid_name,
 			    valid_age, valid_email, valid_gender, valid_height, valid_haircolor, valid_comment));
 		    dbHandler.close();
 		    Toast_msg = "Data Update successfully";
 		    Show_Toast(Toast_msg);
 		    Reset_Text();
+		    
+			Intent view_user = new Intent(Add_Update_User.this, Main_Screen.class);
+			view_user.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
+				| Intent.FLAG_ACTIVITY_NEW_TASK);
+			startActivity(view_user);
+			finish();
+			
+			
 		} else {
 		    Toast_msg = "Sorry Some Fields are missing.\nPlease Fill up all.";
 		    Show_Toast(Toast_msg);
