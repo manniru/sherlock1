@@ -12,5 +12,13 @@
     <string name="title_activity_reports_list">ReportsList</string>
     <string name="title_activity_reports_add">ReportsAdd</string>
     <string name="title_activity_camera">Camera</string>
+    <string name="title_activity_dblist">Zahra Sherlock Web Services</string>
+    <string name="title_activity_main">Zahra Sherlock</string>
+    <string name="hello">Hello</string>
+    <string name="title_activity_json_two">JsonTwoActivity</string>
+    <string name="title_activity_json_one">JsonOneActivity</string>
     
+    <string name="url">http://gillwindallolympicapp.appspot.com/madolympicservlet</string>
+<string name="json">{\"eventName\":\"mens 100 metres\", \"resultList\":[{\"medalColour\":\"bronze\",\"athleteName\":\"gatlin\"},{\"medalColour\":\"silver\",\"athleteName\":\"blake\"},{\"medalColour\":\"gold\",\"athleteName\":\"bolt\"}]}</string>
+
 </resources>

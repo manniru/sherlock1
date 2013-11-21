@@ -29,17 +29,7 @@ public class SearchActivity extends Activity {
 		
 		//////////////////// main code here /////////////////////
 		DBHandler db = new DBHandler(this);
-		// this: Activity class
-		// Inserting Car data
-		///Log.d("Insert: ", "Inserting ..");
 
-	///	db.add(new Users("Mannir", "Male", "168", "29", "Black", "Comment here", "mannir@gmail.com"));
-	///	db.add(new Users("Zahra", "Female", "150", "27", "Black", "Comment here", "zahra@gmail.com"));
-		//System.out.println("Records Added!");
-		//db.add(new Car("Zahra", "Maigari"));
-		//db.add(new Car("Auwal", "Sani"));
-		//db.add(new Car("Salisu", "Rabiu"));
-		// Reads all cars
 		Log.d("Reading: ","Reading all users...");
 		ArrayList<Users> users = db.getAll();
 		

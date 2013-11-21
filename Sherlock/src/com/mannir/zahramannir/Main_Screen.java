@@ -1,10 +1,21 @@
 package com.mannir.zahramannir;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 
 import com.zahra.camera.MakePhotoActivity;
+import com.zahra.sherlock.JsonOneActivity;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -102,7 +113,7 @@ public class Main_Screen extends Activity {
 
 	    @Override
 	    public void onClick(View v) {
-	           Intent intent = new Intent(Main_Screen.this,Json.class); 
+	           Intent intent = new Intent(Main_Screen.this,JsonOneActivity.class); 
 	             startActivity(intent);
 
 	    }
@@ -112,7 +123,7 @@ public class Main_Screen extends Activity {
 
 	    @Override
 	    public void onClick(View v) {
-	           Intent intent = new Intent(Main_Screen.this,ReportsList.class); 
+	           Intent intent = new Intent(Main_Screen.this,DBListActivity.class); 
 	             startActivity(intent);
 
 	    }
@@ -320,5 +331,27 @@ public class Main_Screen extends Activity {
 	}
 
     }
+    
+    public void postData() {
+        // Create a new HttpClient and Post Header
+        HttpClient httpclient = new DefaultHttpClient();
+        HttpPost httppost = new HttpPost("http://www.yoursite.com/script.php");
+
+        try {
+            // Add your data
+            List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
+            nameValuePairs.add(new BasicNameValuePair("personid", "1"));
+            nameValuePairs.add(new BasicNameValuePair("name", "Zahra"));
+            httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
+            // Execute HTTP Post Request
+            HttpResponse response = httpclient.execute(httppost);
+            
+        } catch (ClientProtocolException e) {
+            // TODO Auto-generated catch block
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+        }
+    } 
 
 }

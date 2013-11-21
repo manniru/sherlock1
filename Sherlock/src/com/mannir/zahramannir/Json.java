@@ -43,7 +43,12 @@ public class Json extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.webservices);
         
-        txtViewParsedValue = (TextView) findViewById(R.id.textView1);
+       // txtViewParsedValue = (TextView) findViewById(R.id.textView1);
+        
+        
+       // txtViewParsedValue.setText("mannir");
+        
+        
         
         try {
 			parseJSON();
